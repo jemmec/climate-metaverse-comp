@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.climatemetaversecompunityproject.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\tomis\\UnityProjects\\climate-metaverse-comp-Unity-Project\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "climate-metaverse-comp-Unity-Project [Testing]"
+        }
+      }
+    }
+  ]
+}
