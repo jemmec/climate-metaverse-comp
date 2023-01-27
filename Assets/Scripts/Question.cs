@@ -29,5 +29,10 @@ public class Question : ScriptableObject
 
     public string BadOption => BadOption;
 
+    [SerializeField, Tooltip("The impacts this question has if good option was choosen")]
+    private List<Impact> _goodImpacts = new List<Impact>();
+
+    [SerializeField, Tooltip("The impacts this question has if bad option was choosen")]
+    private List<Impact> _badImpact = new List<Impact>();
 
 }

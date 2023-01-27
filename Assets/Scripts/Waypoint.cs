@@ -15,11 +15,18 @@ public class Waypoint : MonoBehaviour
 
     private BoxCollider _triggerBox;
 
+    [SerializeField]
+    private GameObject _goodChoicePrefab;
+
+    [SerializeField]
+    private GameObject _badChoicePrefab;
+
     void Awake()
     {
         _triggerBox = GetComponent<BoxCollider>();
     }
 
+    
 
 
 
