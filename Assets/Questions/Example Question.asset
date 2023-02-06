@@ -15,8 +15,10 @@ MonoBehaviour:
   _questionName: Example Question
   _questionContent: What would you do if you had to choose between a large fish and
     a even larger orangutan?
-  _goodOption: Large fish, like always.
-  _badOption: Larger orangutan because its the correct choice.
+  _goodOption: Large fish
+  _goodImage: {fileID: 2800000, guid: fa7eb3bc0ea0e7d47b6a6b6e8e251369, type: 3}
+  _badOption: Larger orangutan
+  _badImage: {fileID: 2800000, guid: c98fc96ce1ad3d74bb190df2c773ef35, type: 3}
   _goodImpacts:
   - _types: 3
     _impactFactor: 0.058

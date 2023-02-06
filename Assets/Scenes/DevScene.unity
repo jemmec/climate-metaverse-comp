@@ -182,7 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3d62c465e0d9440b5b89506ecd6221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asset: {fileID: -944628639613478452, guid: 81c185260efb0ee419391166511b060e, type: 3}
 --- !u!1 &368218796
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +775,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2112415654}
     m_Modifications:
+    - target: {fileID: 2583585539467779949, guid: 4ca628e52b58b6843900897fb1ff6e6c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331825182607914523, guid: 4ca628e52b58b6843900897fb1ff6e6c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8699956383278114586, guid: 4ca628e52b58b6843900897fb1ff6e6c,
         type: 3}
       propertyPath: m_RootOrder

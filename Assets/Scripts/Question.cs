@@ -21,13 +21,23 @@ public class Question : ScriptableObject
 
     [SerializeField, TextArea(4, 100)]
     private string _goodOption = "good option";
-
     public string GoodOption => _goodOption;
+
+    [SerializeField]
+    private Texture2D _goodImage;
+
+    public Texture2D GoodImage => _goodImage;
+
 
     [SerializeField, TextArea(4, 100)]
     private string _badOption = "bad option";
 
     public string BadOption => _badOption;
+
+    [SerializeField]
+    private Texture2D _badImage;
+
+    public Texture2D BadImage => _badImage;
 
     [SerializeField, Tooltip("The impacts this question has if good option was choosen")]
     private List<Impact> _goodImpacts = new List<Impact>();
