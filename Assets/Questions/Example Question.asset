@@ -17,7 +17,11 @@ MonoBehaviour:
     a even larger orangutan?
   _goodOption: Large fish, like always.
   _badOption: Larger orangutan because its the correct choice.
-  _goodImpacts: []
+  _goodImpacts:
+  - _types: 3
+    _impactFactor: 0.058
   _badImpact:
   - _types: 2
     _impactFactor: 0.602
+  - _types: 1
+    _impactFactor: 0.357

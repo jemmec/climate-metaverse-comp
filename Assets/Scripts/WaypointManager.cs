@@ -26,8 +26,12 @@ public class WaypointManager : MonoBehaviour
 
     public QuestionAnsweredEvent OnQuestionAnswered => _onQuestionAnswered;
 
+    private PlayerActions _actions;
+
     private void Start()
     {
+        _actions = new PlayerActions();
+        _actions.PLAYER.Enable();
         //Get all of the waypoints, set answer to null
         var wpts = FindObjectsOfType<Waypoint>();
         if (wpts != null && wpts.Length > 0)
@@ -69,12 +73,16 @@ public class WaypointManager : MonoBehaviour
     private void HandleIntersects(Waypoint waypoint)
     {
         _isInteractingWithWaypoint = true;
-        Debug.Log("Intersection!");
+
+        //Early out because this question has already been answered
+        if (_waypoints[waypoint].HasValue) return;
 
         //Freeze player movement ?
 
         //Teleport player to the viewing location ?
 
+        //Show the question
+        waypoint.ShowQuestion(true);
         //Could implement a statemachine here but for sake of
         //time I will do it the hacky Coroutine way, and
         //each waypoint only has one question 
@@ -89,6 +97,8 @@ public class WaypointManager : MonoBehaviour
                 waypoint.InstallPrefab(goodAnswer);
                 //fire question answered event
                 OnQuestionAnswered.Invoke(waypoint.Question, goodAnswer);
+                //Hide the question
+                waypoint.ShowQuestion(false);
                 //Set is interactionWithWaypoint false
                 _isInteractingWithWaypoint = false;
             }
@@ -117,13 +127,13 @@ public class WaypointManager : MonoBehaviour
     {
         goodAnswer = false;
         //Good answer
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (_actions.PLAYER.GoodAnswer.IsPressed())
         {
             goodAnswer = true;
             return true;
         }
         //Bad Answer
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (_actions.PLAYER.BadAnswer.IsPressed())
             return true;
         return false;
     }
@@ -140,6 +150,9 @@ public class WaypointManager : MonoBehaviour
         goodAnswer = false;
         return false;
     }
+
+
+
 
 }
 

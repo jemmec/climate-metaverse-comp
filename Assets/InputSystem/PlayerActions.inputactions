@@ -1,0 +1,96 @@
+{
+    "name": "PlayerActions",
+    "maps": [
+        {
+            "name": "PLAYER",
+            "id": "6691ab7d-5480-4385-8f9c-9b6a22838ed9",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Button",
+                    "id": "8aadb7d7-734a-45b4-a699-5a19719f380a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BadAnswer",
+                    "type": "Button",
+                    "id": "95e34a5f-bd0a-41d2-8b64-a747357bedcb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GoodAnswer",
+                    "type": "Button",
+                    "id": "d600b865-92e3-46a3-b5aa-a8877df24758",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "77566de5-7cf6-4bb7-a651-165a53de6b80",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "b302cb7b-a52c-4668-97c1-75166dc7d8c6",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "8074dd7f-c31c-48b1-8068-992c382592a6",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8e8b4727-8538-451a-8ece-8d76ba9f6712",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BadAnswer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89b1c8b1-905a-4e33-89cc-c27fcc8a97b1",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoodAnswer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

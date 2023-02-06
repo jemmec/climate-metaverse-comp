@@ -15,6 +15,11 @@ public class Waypoint : MonoBehaviour
     public Question Question => _question;
 
     [SerializeField]
+    private UIQuestion _questionUI;
+
+    public UIQuestion QuestionUI => _questionUI;
+
+    [SerializeField]
     private GameObject _goodChoicePrefab;
     public GameObject GoodChoicePrefab => _goodChoicePrefab;
 
@@ -28,7 +33,20 @@ public class Waypoint : MonoBehaviour
 
     void Awake()
     {
+        if (!Question)
+            throw new System.Exception("Waypoint has no question! Ensure all waypoints have a question assigned.");
+
         _triggerBox = GetComponent<BoxCollider>();
+        _questionUI.ApplyQuestion(Question);
+
+        _questionUI.Show(false);
+
+    }
+
+
+    public void ShowQuestion(bool show)
+    {
+        _questionUI.Show(show);
     }
 
 
@@ -49,8 +67,5 @@ public class Waypoint : MonoBehaviour
     {
         //TODO
     }
-
-
-
 
 }
